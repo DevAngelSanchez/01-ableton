@@ -15,6 +15,9 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Global styles -->
+		<link rel="stylesheet" href="./src/styles/global.css" />
 	</head>
 	<body>
 		<slot />
@@ -22,23 +25,28 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--olive: #fbffa7;
-		--green: #b6ffc0;
-		--blue: #0000ff;
-		--dark-grey: #b1c5ff;
-		--dark-grey-2: #d5b3ff;
-		--orange: #ff764d;
+		--white: #ffffff;
+		--black: #000000;
+		--grey: #7f7f7f;
+		--light-grey: #e8e5e480;
 		--accent-gradient: linear-gradient(
 			45deg,
-			rgb(var(--olive)),
-			rgb(var(--dark-grey)) 30%,
+			rgb(var(--black)),
+			rgb(var(--grey)) 30%,
 			white 60%
 		);
 	}
 	html {
 		font-family: system-ui, sans-serif;
 		background: white;
+		font-size: 10px;
 	}
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
 	code {
 		font-family:
 			Menlo,

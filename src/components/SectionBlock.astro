@@ -1,0 +1,28 @@
+---
+
+---
+
+<section>
+  <div class="hero-wrapper">
+    <slot />
+  </div>
+</section>
+
+<style>
+  section {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+    height: min-content;
+    overflow: hidden;
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-flow: column;
+    max-width: 1400px;
+    gap: 4rem;
+  }
+</style>

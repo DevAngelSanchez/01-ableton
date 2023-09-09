@@ -1,0 +1,32 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<nav class="nav-container">
+  <ul class="navigation">
+    <NavLink path="/home" text="Home" isActive={true} />
+    <NavLink path="/profile" text="Profile" isActive={false} />
+    <NavLink path="/contact" text="Contact" isActive={false} />
+  </ul>
+</nav>
+
+<style>
+  .nav-container {
+    padding: 3rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navigation {
+    gap: 0.5rem;
+    border-radius: 5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(16px);
+    background-color: rgba(232, 229, 228, 0.5);
+    border-radius: 100px;
+    opacity: 1;
+  }
+</style>
