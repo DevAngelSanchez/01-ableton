@@ -1,0 +1,17 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="card-grid-container">
+  <Card />
+  <Card />
+</div>
+
+<style>
+  .card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    gap: 2rem;
+    padding: 4rem 4rem 0;
+  }
+</style>

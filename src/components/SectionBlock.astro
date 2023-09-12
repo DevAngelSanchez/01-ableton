@@ -1,9 +1,9 @@
 ---
-
+const { isHero } = Astro.props;
 ---
 
 <section>
-  <div class="hero-wrapper">
+  <div class={isHero && "hero-wrapper"}>
     <slot />
   </div>
 </section>

@@ -1,0 +1,92 @@
+---
+
+---
+
+<article class="card">
+  <a href="/projects/project" class="card-container">
+    <div class="card-content">
+      <h3 class="card-title">Aire</h3>
+      <div class="card-icon">
+        <box-icon name="up-arrow-alt" size="ms" color="#000"></box-icon>
+      </div>
+      <picture>
+        <img src="./src/assets/img/model-1.webp" alt="Model" />
+      </picture>
+    </div>
+  </a>
+</article>
+
+<style>
+  .card {
+    & .card-content {
+      overflow: hidden;
+      position: relative;
+      border-radius: 1.2rem;
+      height: 100%;
+
+      & .card-title {
+        color: var(--white);
+        font-size: 1.4rem;
+        text-decoration: none;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      & .card-icon {
+        width: 4.8rem;
+        min-width: 4.8rem;
+        height: 4.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white);
+        border-radius: 50%;
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        transform: rotate(45deg);
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      & picture {
+        display: inline-block;
+        height: 100%;
+
+        & img {
+          height: 100%;
+        }
+      }
+    }
+
+    &:is(:hover, :focus) {
+      & .card-title {
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 1;
+      }
+
+      & .card-icon {
+        opacity: 1 !important;
+        visibility: visible !important;
+        top: 2rem !important;
+        right: 2rem !important;
+        z-index: 1;
+      }
+
+      & picture {
+        filter: blur(5px);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+</style>
