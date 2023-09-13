@@ -6,6 +6,7 @@ import SectionBlock from "../components/SectionBlock.astro";
 import H1 from "../components/H1.astro";
 import Tags from "../components/Tags/Tags.astro";
 import Cards from "../components/Cards/Cards.astro";
+import ContactHero from "../components/ContactHero.astro";
 ---
 
 <Layout title="Oh! Studio | About Page">
@@ -21,41 +22,44 @@ import Cards from "../components/Cards/Cards.astro";
     <SectionBlock>
       <Cards />
     </SectionBlock>
-
-    <style>
-      html {
-        box-sizing: border-box;
-      }
-
-      main {
-        margin: auto;
-        padding: 0rem;
-        max-width: 100%;
-        font-size: 2rem;
-        line-height: 1.6;
-      }
-
-      .spacer-3 {
-        padding: 3rem;
-      }
-
-      .gap-4 {
-        display: flex;
-        gap: 4rem;
-      }
-
-      .column {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .align-center {
-        align-items: center;
-      }
-
-      .justify-center {
-        justify-content: center;
-      }
-    </style>
+    <SectionBlock>
+      <ContactHero />
+    </SectionBlock>
   </main>
 </Layout>
+
+<style>
+  html {
+    box-sizing: border-box;
+  }
+
+  main {
+    margin: auto;
+    padding: 0rem;
+    max-width: 100%;
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+
+  .spacer-3 {
+    padding: 3rem;
+  }
+
+  .gap-4 {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .align-center {
+    align-items: center;
+  }
+
+  .justify-center {
+    justify-content: center;
+  }
+</style>

@@ -3,7 +3,7 @@ const { isHero } = Astro.props;
 ---
 
 <section>
-  <div class={isHero && "hero-wrapper"}>
+  <div class=`w-full ${isHero ? "hero-wrapper" : ""}`>
     <slot />
   </div>
 </section>
@@ -17,6 +17,11 @@ const { isHero } = Astro.props;
     position: relative;
     height: min-content;
     overflow: hidden;
+  }
+
+  .w-full {
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-wrapper {
